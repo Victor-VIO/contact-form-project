@@ -13,7 +13,16 @@ const app = express();
 // ============================================
 // STEP 2: Middleware Configuration
 // ============================================
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://contact-form-project-1-0c2g.onrender.com",
+      "http://localhost:5500",
+    ],
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
