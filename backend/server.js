@@ -158,6 +158,18 @@ app.get("/health", (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Contact Form API",
+    status: "running",
+    version: "1.0.0",
+    endpoints: {
+      health: "/health",
+      contact: "/contact (POST)",
+    },
+    documentation: "https://github.com/Victor-VIO/contact-form-project",
+  });
+});
 // ============================================
 // STEP 7: Start Server
 // ============================================
