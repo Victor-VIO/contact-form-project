@@ -30,8 +30,11 @@ app.use(express.json());
 // STEP 3: Configuration
 
 // const N8N_WEBHOOK_URL = "http://localhost:5678/webhook-test/Contact";
+// const N8N_WEBHOOK_URL =
+//   process.env.N8N_WEBHOOK_URL || "http://localhost:5678/webhook/Contact";
 const N8N_WEBHOOK_URL =
-  process.env.N8N_WEBHOOK_URL || "http://localhost:5678/webhook/Contact";
+  process.env.N8N_WEBHOOK_URL ||
+  "https://avid-meryl-nonpliably.ngrok-free.dev/webhook/Contact";
 const PORT = process.env.PORT || 3000;
 
 // ============================================
